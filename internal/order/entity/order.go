@@ -11,6 +11,7 @@ type Order struct{
 
 type OrderRepositoryInterface interface {
 	Save(order *Order) error
+	GetTotal() (int, error)
 }
 
 func (o *Order) IsValid() error{
